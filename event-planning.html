@@ -42,8 +42,8 @@
       <section class="planning-song-request">
         <h2>Song Request Template</h2>
         <p>List your must-play and do-not-play songs below:</p>
-        <textarea placeholder="Must-Play Songs (e.g., Artist - Song Title)" rows="4"></textarea>
-        <textarea placeholder="Do-Not-Play Songs (e.g., Artist - Song Title)" rows="4"></textarea>
+        <textarea id="mustPlaySongs" placeholder="Must-Play Songs (e.g., Artist - Song Title)" rows="4"></textarea>
+        <textarea id="doNotPlaySongs" placeholder="Do-Not-Play Songs (e.g., Artist - Song Title)" rows="4"></textarea>
       </section>
 
       <!-- Event Timeline -->
@@ -70,6 +70,9 @@
 
       <!-- Download Button -->
       <button id="downloadPdf">Download as PDF</button>
+      <div class="success-message" id="successMessage" style="display: none;">
+        Your Event Planning Guide has been downloaded successfully!
+      </div>
     </div>
   </section>
 
