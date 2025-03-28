@@ -1,4 +1,3 @@
-// Function to generate and download the Event Planning Guide as a PDF
 document.getElementById('downloadPdf').addEventListener('click', function () {
   const { jsPDF } = window.jspdf;
 
@@ -23,27 +22,38 @@ document.getElementById('downloadPdf').addEventListener('click', function () {
   doc.text("- 1 Week Before: Share your playlist and any special requests with your DJ.", 10, 90);
   doc.text("- Day Of: Relax and enjoy your event!", 10, 100);
 
+  // Retrieve Must-Play and Do-Not-Play songs from textarea elements
+  const mustPlaySongs = document.getElementById('mustPlaySongs').value.split('\n').filter(song => song.trim() !== '');
+  const doNotPlaySongs = document.getElementById('doNotPlaySongs').value.split('\n').filter(song => song.trim() !== '');
+
   doc.setFontSize(16);
   doc.text("Song Request Template", 10, 120);
   doc.setFontSize(12);
   doc.text("Must-Play Songs:", 10, 130);
-  doc.text("Do-Not-Play Songs:", 10, 140);
+  mustPlaySongs.forEach((song, index) => {
+    doc.text(`- ${song}`, 10, 140 + index * 10);
+  });
+
+  doc.text("Do-Not-Play Songs:", 10, 160 + mustPlaySongs.length * 10);
+  doNotPlaySongs.forEach((song, index) => {
+    doc.text(`- ${song}`, 10, 170 + mustPlaySongs.length * 10 + index * 10);
+  });
 
   doc.setFontSize(16);
-  doc.text("Sample Event Timeline", 10, 160);
+  doc.text("Sample Event Timeline", 10, 200 + mustPlaySongs.length * 10 + doNotPlaySongs.length * 10);
   doc.setFontSize(12);
-  doc.text("- 6:00 PM: Guest arrival & cocktail hour", 10, 170);
-  doc.text("- 7:00 PM: Dinner", 10, 180);
-  doc.text("- 8:00 PM: First dance & speeches", 10, 190);
-  doc.text("- 9:00 PM: Open dance floor", 10, 200);
-  doc.text("- 11:00 PM: Last song & farewell", 10, 210);
+  doc.text("- 6:00 PM: Guest arrival & cocktail hour", 10, 210 + mustPlaySongs.length * 10 + doNotPlaySongs.length * 10);
+  doc.text("- 7:00 PM: Dinner", 10, 220 + mustPlaySongs.length * 10 + doNotPlaySongs.length * 10);
+  doc.text("- 8:00 PM: First dance & speeches", 10, 230 + mustPlaySongs.length * 10 + doNotPlaySongs.length * 10);
+  doc.text("- 9:00 PM: Open dance floor", 10, 240 + mustPlaySongs.length * 10 + doNotPlaySongs.length * 10);
+  doc.text("- 11:00 PM: Last song & farewell", 10, 250 + mustPlaySongs.length * 10 + doNotPlaySongs.length * 10);
 
   doc.setFontSize(16);
-  doc.text("Tips for Working with Your DJ", 10, 230);
+  doc.text("Tips for Working with Your DJ", 10, 270 + mustPlaySongs.length * 10 + doNotPlaySongs.length * 10);
   doc.setFontSize(12);
-  doc.text("- Share your playlist and preferences at least 2 weeks before the event.", 10, 240);
-  doc.text("- Communicate any special requests (e.g., first dance, announcements).", 10, 250);
-  doc.text("- Confirm event details (date, time, location) 1 week prior.", 10, 260);
+  doc.text("- Share your playlist and preferences at least 2 weeks before the event.", 10, 280 + mustPlaySongs.length * 10 + doNotPlaySongs.length * 10);
+  doc.text("- Communicate any special requests (e.g., first dance, announcements).", 10, 290 + mustPlaySongs.length * 10 + doNotPlaySongs.length * 10);
+  doc.text("- Confirm event details (date, time, location) 1 week prior.", 10, 300 + mustPlaySongs.length * 10 + doNotPlaySongs.length * 10);
 
   // Save the PDF
   doc.save('EventPlanningGuide.pdf');
