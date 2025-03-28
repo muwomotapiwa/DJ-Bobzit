@@ -207,46 +207,107 @@ body {
 
 /* Footer */
 .footer {
+  padding: 40px 20px;
+  text-align: center;
   background: rgba(0, 0, 0, 0.8);
-  color: white;
-  padding: 30px 0;
-  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  border-top: 1px solid rgba(127, 255, 0, 0.2);
+  width: 100%;
+  backdrop-filter: blur(5px);
+  position: relative;
+  z-index: 1;
+}
+
+.footer-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
 }
 
 .footer-links {
   display: flex;
   justify-content: center;
-  flex-wrap: wrap;
-  gap: 20px;
+  gap: 25px;
   margin-bottom: 20px;
+  flex-wrap: wrap;
 }
 
 .footer-links a {
-  color: var(--text-secondary);
+  color: rgba(255, 255, 255, 0.9);
   text-decoration: none;
-  font-size: 0.9rem;
-  transition: var(--transition);
+  font-size: 15px;
+  transition: all 0.3s ease;
+  position: relative;
+  padding: 5px 0;
 }
 
 .footer-links a:hover {
-  color: var(--primary-color);
+  color: #7FFF00;
 }
 
-.footer-copyright {
-  font-size: 0.9rem;
-  color: var(--text-secondary);
+.footer-links a::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: #7FFF00;
+  transition: width 0.3s ease;
+}
+
+.footer-links a:hover::after {
+  width: 100%;
+}
+
+.footer-info {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.copyright {
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.7);
   margin-bottom: 10px;
 }
 
+.footer-credit {
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.7);
+}
+
 .footer-credit a {
-  color: var(--text-secondary);
+  color: #7FFF00;
   text-decoration: none;
-  font-size: 0.9rem;
-  transition: var(--transition);
+  transition: all 0.3s ease;
+  font-weight: 600;
 }
 
 .footer-credit a:hover {
-  color: var(--primary-color);
+  color: white;
+  text-shadow: 0 0 10px rgba(127, 255, 0, 0.5);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .footer {
+    padding: 30px 20px;
+  }
+  
+  .footer-links {
+    gap: 15px;
+    margin-bottom: 15px;
+  }
+  
+  .footer-links a {
+    font-size: 14px;
+  }
+  
+  .copyright, .footer-credit {
+    font-size: 13px;
+  }
 }
 
 /* Responsive adjustments */
