@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="DJ Bobzit - Song Request Form">
+  <title>Song Request Form - DJ Bobzit</title>
+  <link rel="stylesheet" href="css/songrequest.css">
+</head>
+<body>
+  <!-- Layer order: black -> background -> pattern -->
+  <div class="black-layer"></div>
+  <div class="background"></div>
+  <div class="pattern-overlay"></div>
+
+  <!-- Song Request Section -->
+  <section class="form-section" id="songRequest">
+    <div class="form-container">
+      <div class="form-overlay"></div>
+      <img src="https://af6815798a.imgdist.com/pub/bfra/knkjywkm/3r5/rl6/kjs/DJBobzit_Green-Photoroom-removebg-preview.png" alt="DJ Bobzit Logo" class="form-logo" />
+      <h2>Song Request Form</h2>
+      <p>Fill out this form to share your must-play and do-not-play lists for your event.</p>
+      <form class="dj-form" id="songRequestForm">
+        <!-- Event Details -->
+        <div class="input-group">
+          <label for="eventName">Event Name</label>
+          <input type="text" id="eventName" placeholder="e.g., Wedding Reception" name="eventName" required />
+        </div>
+        <div class="input-group">
+          <label for="eventDate">Event Date</label>
+          <input type="date" id="eventDate" name="eventDate" required />
+        </div>
+
+        <!-- Client Information -->
+        <div class="input-group">
+          <label for="clientName">Your Name</label>
+          <input type="text" id="clientName" placeholder="Your Full Name" name="clientName" required />
+        </div>
+        <div class="input-group">
+          <label for="clientEmail">Your Email</label>
+          <input type="email" id="clientEmail" placeholder="Your Email Address" name="clientEmail" required />
+        </div>
+        <div class="input-group">
+          <label for="clientPhone">Phone Number</label>
+          <input type="tel" id="clientPhone" placeholder="Your Phone Number" name="clientPhone" required />
+        </div>
+
+        <!-- Song Preferences -->
+        <h3>Must-Play Songs</h3>
+        <div class="input-group">
+          <label for="mustPlay">List your must-play songs</label>
+          <textarea id="mustPlay" placeholder="List your must-play songs here (e.g., Artist - Song Title). Separate each song with a new line." name="mustPlay" rows="6"></textarea>
+        </div>
+
+        <h3>Do-Not-Play Songs</h3>
+        <div class="input-group">
+          <label for="doNotPlay">List your do-not-play songs</label>
+          <textarea id="doNotPlay" placeholder="List your do-not-play songs here (e.g., Artist - Song Title). Separate each song with a new line." name="doNotPlay" rows="6"></textarea>
+        </div>
+
+        <!-- Additional Notes -->
+        <div class="input-group">
+          <label for="additionalNotes">Additional Notes</label>
+          <textarea id="additionalNotes" placeholder="Any other instructions or preferences?" name="additionalNotes" rows="4"></textarea>
+        </div>
+
+        <!-- Submit Button -->
+        <button type="submit" aria-label="Submit form">Submit and Download</button>
+        <div class="success-message" id="successMessage">
+          Thank you for submitting your song request! You can now download your completed form.
+        </div>
+      </form>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-links">
+      <a href="index.html">Home</a>
+      <a href="#about">About</a>
+      <a href="#services">Services</a>
+      <a href="#downloads">Resources</a>
+      <a href="#gallery">Gallery</a>
+      <a href="#contact">Contact</a>
+      <a href="privacy.html">Privacy Policy</a>
+      <a href="terms.html">Terms of Service</a>
+    </div>
+    <div class="footer-copyright">
+      © 2025 DJ Bobzit. All rights reserved.
+    </div>
+    <div class="footer-credit">
+      <a href="mailto:muwomotapiwa@gmail.com" class="logo">Website by KypexTech</a>
+    </div>
+  </footer>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+  <script src="js/songrequest.js"></script>
+</body>
+</html>
