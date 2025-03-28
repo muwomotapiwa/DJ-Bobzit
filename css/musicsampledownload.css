@@ -1,0 +1,59 @@
+.music-sample-section {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 20px;
+}
+.music-sample-container {
+  width: 100%;
+  max-width: 800px;
+  background: rgba(0, 0, 0, 0.6);
+  border-radius: 16px;
+  padding: 40px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(5px);
+  text-align: center;
+}
+.music-sample-logo {
+  width: 150px;
+  margin-bottom: 20px;
+}
+.music-sample-section h1 {
+  font-size: 36px;
+  margin-bottom: 20px;
+}
+.music-sample-section p {
+  font-size: 16px;
+  color: rgba(255, 255, 255, 0.8);
+  margin-bottom: 30px;
+}
+.song-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+}
+.song-item input[type="checkbox"] {
+  margin-right: 10px;
+  width: 20px;
+  height: 20px;
+}
+.song-item label {
+  font-size: 16px;
+  color: white;
+}
+#downloadSelectedSongs {
+  background-color: #7FFF00;
+  color: black;
+  border: none;
+  padding: 14px 30px;
+  font-size: 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+#downloadSelectedSongs:hover {
+  background-color: #6de600;
+  transform: translateY(-2px);
+}

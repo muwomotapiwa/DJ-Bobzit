@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Download music samples from DJ Bobzit's collection.">
+  <title>Music Sample Downloads - DJ Bobzit</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <!-- Layer order: black -> background -> pattern -->
+  <div class="black-layer"></div>
+  <div class="background"></div>
+  <div class="pattern-overlay"></div>
+
+  <!-- Music Sample Download Section -->
+  <section class="music-sample-section" id="musicSampleDownload">
+    <div class="music-sample-container">
+      <img src="https://af6815798a.imgdist.com/pub/bfra/knkjywkm/3r5/rl6/kjs/DJBobzit_Green-Photoroom-removebg-preview.png" alt="DJ Bobzit Logo" class="music-sample-logo" />
+      <h1>Music Sample Downloads</h1>
+      <p>Select the songs you wish to download:</p>
+
+      <!-- Song List -->
+      <form id="songDownloadForm">
+        <div class="song-item">
+          <input type="checkbox" id="song1" name="songs" value="Kalimba.mp3" />
+          <label for="song1">DJ im waiting for the song please!!! (4:32)</label>
+        </div>
+        <div class="song-item">
+          <input type="checkbox" id="song2" name="songs" value="What_Is_Afro_House_Vol.3_Mixed_By_Deejay_Bobzit(hearthis.at).mp3" />
+          <label for="song2">You are not cooperating DJ SONG!!! (5:18)</label>
+        </div>
+        <div class="song-item">
+          <input type="checkbox" id="song3" name="songs" value="afro_house_vol_2.mp3" />
+          <label for="song3">What Is Afro House Vol.2 Mixed by Deejay Bobzit (1:09:20)</label>
+        </div>
+        <div class="song-item">
+          <input type="checkbox" id="song4" name="songs" value="afro_house_vol_3.mp3" />
+          <label for="song4">What Is Afro House Vol.3 Mixed By Deejay Bobzit (1:12:01)</label>
+        </div>
+
+        <!-- Download Button -->
+        <button type="button" id="downloadSelectedSongs">Download Selected Songs</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-links">
+      <a href="index.html">Home</a>
+      <a href="#about">About</a>
+      <a href="#services">Services</a>
+      <a href="#downloads">Resources</a>
+      <a href="#gallery">Gallery</a>
+      <a href="#contact">Contact</a>
+      <a href="privacy.html">Privacy Policy</a>
+      <a href="terms.html">Terms of Service</a>
+    </div>
+    <div class="footer-copyright">
+      © 2025 DJ Bobzit. All rights reserved.
+    </div>
+    <div class="footer-credit">
+      <a href="mailto:muwomotapiwa@gmail.com" class="logo">Website by KypexTech</a>
+    </div>
+  </footer>
+
+  <script src="js/musicsampledownload.js"></script>
+</body>
+</html>
